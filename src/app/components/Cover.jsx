@@ -1,7 +1,18 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 
 const Cover = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    const audio = new Audio("/song/song.mp3"); // Ganti dengan path audio kamu
+    audio
+      .play()
+      .then(() => setIsPlaying(true))
+      .catch((err) => console.error("Error playing audio:", err));
+  };
   return (
     <div className="">
       <div className="relative rounded-b-full flex items-center justify-center">
@@ -26,7 +37,7 @@ const Cover = () => {
             We invite you to attend our wedding
           </p>
           <p className="text-white text-center font-bold text-3xl font-allura">
-            Widya & Arif
+            Arif & Ayu
           </p>
         </div>
         <div className="absolute top-[85px] left-[280px]">
@@ -147,16 +158,22 @@ const Cover = () => {
             className="w-[20px] h-[20px] "
           />
         </div>
-        <button className="bg-primary p-3 rounded-full flex flex-col items-center w-[184px]">
-          <Image
-            src="/icon/invitation.png"
-            alt="banner"
-            width={1000}
-            height={1000}
-            className="object-cover w-[20px] h-[20px] shadow-pink"
-          />
-          <p className=" text-white text-sm">Open Invitation</p>
-        </button>
+        <Link href="/home">
+          <button
+            onClick={handlePlay}
+            className="bg-primary p-3 rounded-full flex flex-col items-center w-[184px]"
+          >
+            <Image
+              src="/icon/invitation.png"
+              alt="banner"
+              width={1000}
+              height={1000}
+              className="object-cover w-[20px] h-[20px] shadow-pink"
+            />
+
+            <p className=" text-white text-sm">Open Invitation</p>
+          </button>
+        </Link>
 
         <div className="">
           <Image
