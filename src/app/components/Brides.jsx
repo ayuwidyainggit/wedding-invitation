@@ -4,7 +4,7 @@ import React from "react";
 const Brides = () => {
   return (
     <div className=" flex justify-center  ">
-      <div className="text-center bg-peachColor w-[350px] h-auto  rounded-xl flex flex-col items-center">
+      <div className="text-center bg-peachColor w-[350px] h-auto  rounded-t-xl flex flex-col items-center">
         <p className=" text-purpleColor text-[35px] mt-10 leading-none">
           Meet The Happy Couple
         </p>
@@ -41,7 +41,7 @@ const Brides = () => {
         <p className=" text-gray-400 ">Doughter of </p>
         <p className=" text-gray-600 ">Ngajiyono & Sumiyati </p>
 
-        <button className="bg-primary p-3 rounded-full flex flex-col items-center w-[184px] mt-[30px] mb-[50px]">
+        <button className="bg-primary p-3 rounded-md flex flex-col items-center w-[184px] mt-[30px] mb-[50px]">
           <p className=" text-white text-sm">Our Story</p>
         </button>
       </div>
