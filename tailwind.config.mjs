@@ -7,9 +7,17 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        allura: ["'Allura'", "cursive"], // Tambahkan font Allura
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#E382D3",
+      },
+
+      boxShadow: {
+        pink: "0px 4px 100px rgba(255, 105, 180, 0.5)", // Shadow pink dengan opacity
       },
     },
   },
