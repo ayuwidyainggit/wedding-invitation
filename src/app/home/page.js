@@ -15,7 +15,7 @@ const page = () => {
   return (
     <div className=" h-auto bg-white">
       <Home />
-      <div className="relative -mt-[20px] z-50">
+      <div className="relative mt-[12px]  z-50">
         <Brides />
       </div>
       <Schedule />

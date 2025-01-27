@@ -15,8 +15,9 @@ export default {
         foreground: "var(--foreground)",
         primary: "#E382D3",
         babypink: "#EBA1DE",
-        peachColor: "#FCD1D1",
+        peachColor: "#D5A7AF",
         purpleColor: "#B70B9D",
+        babypink2: "#fff8f8",
       },
 
       boxShadow: {

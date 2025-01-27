@@ -3,8 +3,8 @@ import React from "react";
 
 const Brides = () => {
   return (
-    <div className=" flex justify-center  ">
-      <div className="text-center bg-peachColor w-[350px] h-auto  rounded-t-xl flex flex-col items-center">
+    <div className=" flex justify-center bg-babypink2 -mt-3 ">
+      <div className="text-center   rounded-t-xl flex flex-col items-center">
         <p className=" text-purpleColor text-[35px] mt-10 leading-none">
           Meet The Happy Couple
         </p>
