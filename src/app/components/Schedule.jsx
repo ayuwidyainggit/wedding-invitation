@@ -37,72 +37,17 @@ const Schedule = () => {
   const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+Celebration&dates=20250511T020000Z/20250511T050000Z&details=By+asking+for+the+grace+and+blessing+of+Allah+SWT.+We+intend+to+hold+a+wedding+celebration+for+our+sons+and+daughters.&location=Your+Location&sf=true&output=xml`;
 
   return (
-    <div className=" flex justify-center ">
-      <div className="text-center bg-peachColor w-[350px] h-[700px]   flex flex-col items-center">
-        <div className="flex items-center ">
-          <div className=" flex flex-col items-end">
-            <Image
-              src="/icon/left1.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className=" h-[15px] w-[15px]"
-            />
-            <Image
-              src="/icon/left2.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className=" h-[20px] w-[20px] "
-            />
-          </div>
-          <div className="bg-primary h-[2px] w-[120px] rounded-full"></div>
-          <div className="-mb-3 -ml-3">
-            <Image
-              src="/icon/left2.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className=" h-[10px] w-[10px] "
-            />
-          </div>
-          <div className="mx-2">
-            <Image
-              src="/icon/pinkFlower.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className="object-cover h-[30px] w-[30px]  "
-            />
-          </div>
-          <div className="-mb-3 -mr-3">
-            <Image
-              src="/icon/right2.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className=" h-[10px] w-[10px] "
-            />
-          </div>
-          <div className="bg-primary h-[2px] w-[120px] rounded-full "></div>
-          <div className=" ">
-            <Image
-              src="/icon/right1.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className=" h-[15px] w-[15px]"
-            />
-            <Image
-              src="/icon/right2.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className=" h-[20px] w-[20px] "
-            />
-          </div>
-        </div>
-
+    <div className=" relative flex justify-center bg-gradient-to-b from-babypink2 to-peachColor ">
+      <div className="absolute">
+        <Image
+          src="/icon/flower3.png"
+          alt="banner"
+          width={1000}
+          height={1000}
+          className="object-cover h-[30px] w-[30px]  "
+        />
+      </div>
+      <div className="text-center   flex flex-col items-center">
         <p className=" text-purpleColor text-[35px] mt-10 leading-none">
           We’r Getting Merried
         </p>

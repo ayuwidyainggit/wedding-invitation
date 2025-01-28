@@ -1,13 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import {
-  motion,
-  animate,
-  useScroll,
-  useMotionValue,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Home = () => {
   // Hook untuk mendapatkan progres scroll
@@ -83,21 +77,52 @@ const Home = () => {
       </motion.div>
 
       {/* SVG Wave Background at the Bottom */}
-      <div className="absolute bottom-0 w-full">
+      <motion.div
+        className="absolute -bottom-2.5 w-full"
+        style={{
+          x: horizontalMovementRight, // Posisi horizontal berdasarkan scroll
+        }}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#fff8f8"
             fillOpacity="1"
-            d="M0,32L26.7,74.7C53.3,117,107,203,160,197.3C213.3,192,267,96,320,101.3C373.3,107,427,213,480,240C533.3,267,587,213,640,208C693.3,203,747,245,800,272C853.3,299,907,309,960,266.7C1013.3,224,1067,128,1120,85.3C1173.3,43,1227,53,1280,64C1333.3,75,1387,85,1413,90.7L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
-      </div>
+      </motion.div>
+      <motion.div
+        className="absolute -left-[430px] -bottom-2.5 w-full"
+        style={{
+          x: horizontalMovementRight, // Posisi horizontal berdasarkan scroll
+        }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#fff8f8"
+            fillOpacity="1"
+            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </motion.div>
 
-      <div className="absolute w-[350px] top-[500px]">
+      <motion.div className="absolute w-[350px] top-[500px]">
         <motion.div
           className=""
           style={{
             x: horizontalMovementRight, // Posisi horizontal berdasarkan scroll
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 2, // Animation duration in seconds
           }}
         >
           <p className=" text-white text-center font-bold text-base">
@@ -112,6 +137,18 @@ const Home = () => {
           style={{
             x: horizontalMovementLeft,
           }}
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 4, // Animation duration in seconds
+          }}
         >
           <p className=" text-white text-center my-[20px] text-xl">
             THE WEDDING OF
@@ -121,6 +158,18 @@ const Home = () => {
           className=" flex gap-2 justify-center "
           style={{
             x: horizontalMovementRight, // Posisi horizontal berdasarkan scroll
+          }}
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 4, // Animation duration in seconds
           }}
         >
           <div className="flex flex-col justify-start items-end">
@@ -164,6 +213,18 @@ const Home = () => {
           style={{
             x: horizontalMovementRight, // Posisi horizontal berdasarkan scroll
           }}
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 4, // Animation duration in seconds
+          }}
         >
           <div className="w-[5px] h-[5px] rounded-full bg-white"></div>
           <div className="w-[10px] h-[10px] rounded-full bg-white"></div>
@@ -173,7 +234,7 @@ const Home = () => {
           <div className="w-[10px] h-[10px] rounded-full bg-white"></div>
           <div className="w-[5px] h-[5px] rounded-full bg-white"></div>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
