@@ -1,47 +1,49 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Party = () => {
   return (
-    <div className=" flex justify-center">
-      <div className=" relative text-center bg-peachColor w-[350px] h-auto flex flex-col items-center">
+    <div className="relative flex justify-center h-screen">
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute top-0 w-full h-full object-cover opacity-40"
+        src="/song/bg_video.mp4"
+      ></video>
+      <div className=" absolute top-[10rem]">
         <Image
-          src="/cake.webp"
+          src="/icon/party.png"
           alt="banner"
           width={1000}
           height={1000}
-          className="object-cover h-[500px] w-[350px]  opacity-45 "
+          className=" h-[200px] w-[200px]"
         />
-
-        <div className="absolute mt-6">
-          <Image
-            src="/icon/dinner-table.png"
-            alt="banner"
-            width={1000}
-            height={1000}
-            className="object-cover h-[60px] w-[60px]"
-          />
-        </div>
-        <div className="absolute mt-[100px]">
-          <p className=" text-3xl font-semibold text-white">Wedding Party</p>
-        </div>
-        <div className="absolute mt-[150px]">
-          <p className=" text-xl  text-white">09.00 - 12.00</p>
-        </div>
-        <div className="absolute mt-[200px]">
-          <p className=" text-3xl font-semibold text-white">Raffles Hotel</p>
-        </div>
-        <div className=" absolute mt-[250px]">
-          <p className=" text-xl  text-white">
-            Jl. Terusan Jakarta No.53, Cicaheum, Kec. Kiaracondong, Kota
-            Bandung, Jawa Barat 40291
-          </p>
-        </div>
-
-        <button className="absolute bg-primary p-3 rounded-md flex flex-col items-center w-[184px]  mt-[350px]">
-          <p className=" text-white text-sm">Open Map</p>
-        </button>
       </div>
+
+      <div className=" absolute  top-[140px] text-center  flex flex-col items-center ">
+        <p className="text-purpleColor text-[35px] mt-[15rem] leading-none mb-7">
+          Wedding Party
+        </p>
+        <p className=" text-xl  text-purpleColor mb-5">09.00 - 12.00</p>
+
+        <p className=" text-3xl font-semibold text-purpleColor mb-5">
+          Raffles Hotel
+        </p>
+
+        <p className=" text-xl  text-purpleColor">
+          Jl. Terusan Jakarta No.53, Cicaheum, Kec. Kiaracondong, Kota Bandung,
+          Jawa Barat 40291
+        </p>
+      </div>
+
+      <button className="absolute bottom-[15rem] bg-peachColor  p-3 rounded-md flex flex-col items-center w-[184px]  ">
+        <p className=" text-white text-sm">Open Map</p>
+      </button>
     </div>
   );
 };

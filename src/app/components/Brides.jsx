@@ -16,10 +16,10 @@ const Brides = () => {
   const rawHorizontalMovementRight = useTransform(
     scrollRight,
     [0, 0.1],
-    ["-70vw", "0vw"]
+    ["-80vw", "0vw"]
   );
   const horizontalMovementRight = useSpring(rawHorizontalMovementRight, {
-    stiffness: 80,
+    stiffness: 90,
     damping: 20,
   });
 
@@ -31,10 +31,10 @@ const Brides = () => {
   const rawHorizontalMovementLeft = useTransform(
     scrollLeft,
     [0, 0.1],
-    ["70vw", "0vw"]
+    ["80vw", "0vw"]
   );
   const horizontalMovementLeft = useSpring(rawHorizontalMovementLeft, {
-    stiffness: 80,
+    stiffness: 90,
     damping: 20,
   });
 
@@ -158,9 +158,16 @@ const Brides = () => {
         <p className="text-gray-400">Daughter of </p>
         <p className="text-gray-600">Ngajiyono & Sumiyati </p>
 
-        <button className="bg-primary p-3 rounded-md flex flex-col items-center w-[184px] mt-[30px] mb-[50px]">
+        <motion.button
+          className="bg-peachColor  p-3   rounded-md flex flex-col items-center w-[184px] mt-[30px] mb-[50px]"
+          whileHover={{
+            scale: 1.05, // Membesarkan button saat hover
+            boxShadow: "0px 10px 20px rgba(213, 167, 175, 0.8)", // Bayangan lembut saat hover
+          }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
           <p className="text-white text-sm">Our Story</p>
-        </button>
+        </motion.button>
       </div>
     </div>
   );

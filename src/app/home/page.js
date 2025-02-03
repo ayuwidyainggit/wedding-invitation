@@ -10,6 +10,9 @@ import Gift from "../components/Gift";
 import Message from "../components/Message";
 import Ucapan from "../components/Ucapan";
 import Footer from "../components/Footer";
+import Menu from "../components/Menu";
+import { MdMusicNote } from "react-icons/md";
+import { MdMusicOff } from "react-icons/md";
 
 const page = () => {
   return (
@@ -27,6 +30,14 @@ const page = () => {
       <Message />
       <Ucapan />
       <Footer />
+
+      <div className=" sticky bottom-6 z-50">
+        <Menu />
+      </div>
+
+      <div className=" fixed flex justify-center items-center top-6 right-6  z-50 w-[40px] h-[40px]  rounded-full bg-peachColor">
+        <MdMusicNote />
+      </div>
     </div>
   );
 };

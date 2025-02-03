@@ -77,8 +77,8 @@ const Home = () => {
       </motion.div>
 
       {/* SVG Wave Background at the Bottom */}
-      <motion.div
-        className="absolute -bottom-2.5 w-full"
+      <div
+        className="absolute -bottom-2.5 w-full "
         style={{
           x: horizontalMovementRight, // Posisi horizontal berdasarkan scroll
         }}
@@ -86,25 +86,11 @@ const Home = () => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#fff8f8"
-            fillOpacity="1"
-            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            fill-opacity="1"
+            d="M0,0L34.3,5.3C68.6,11,137,21,206,58.7C274.3,96,343,160,411,197.3C480,235,549,245,617,218.7C685.7,192,754,128,823,96C891.4,64,960,64,1029,101.3C1097.1,139,1166,213,1234,218.7C1302.9,224,1371,160,1406,128L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
           ></path>
         </svg>
-      </motion.div>
-      <motion.div
-        className="absolute -left-[430px] -bottom-2.5 w-full"
-        style={{
-          x: horizontalMovementRight, // Posisi horizontal berdasarkan scroll
-        }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#fff8f8"
-            fillOpacity="1"
-            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-      </motion.div>
+      </div>
 
       <motion.div className="absolute w-[350px] top-[500px]">
         <motion.div

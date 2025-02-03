@@ -7,7 +7,7 @@ const Cover = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
-    const audio = new Audio("/song/song.mp3"); // Ganti dengan path audio kamu
+    const audio = new Audio("/song/song.mp3");
     audio
       .play()
       .then(() => setIsPlaying(true))
@@ -43,7 +43,7 @@ const Cover = () => {
         <Link href="/home">
           <button
             onClick={handlePlay}
-            className="bg-primary p-3 rounded-full flex flex-col items-center w-[184px] "
+            className=" bg-peachColor p-3 rounded-full flex flex-col items-center w-[184px] "
           >
             <Image
               src="/icon/invitation.png"
