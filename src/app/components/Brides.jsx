@@ -42,7 +42,7 @@ const Brides = () => {
     <div className="relative flex flex-col justify-center bg-babypink2 -mt-3">
       <div className="text-center rounded-t-xl flex flex-col items-center">
         <motion.p
-          className="text-purpleColor text-[35px] mt-10 leading-none"
+          className="text-peachColor text-[35px] mt-10 leading-none"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -95,7 +95,7 @@ const Brides = () => {
         </motion.div>
 
         <motion.p
-          className="text-purpleColor text-center font-allura font-extrabold text-[40px]"
+          className="text-peachColor text-center font-allura font-extrabold text-[40px]"
           style={{ x: horizontalMovementRight }}
         >
           Arif Aminudin
@@ -147,7 +147,7 @@ const Brides = () => {
         </motion.div>
 
         <motion.p
-          className="text-purpleColor text-center font-allura font-extrabold text-[40px]"
+          className="text-peachColor text-center font-allura font-extrabold text-[40px]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

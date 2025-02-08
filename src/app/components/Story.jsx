@@ -5,8 +5,8 @@ import React, { useState } from "react";
 const Story = () => {
   const [story, setStory] = useState([
     { id: 1, img: "/prewed/prewed1.png", story: "The Begining" },
-    { id: 2, img: "/prewed/prewed1.png", story: "First Date" },
-    { id: 3, img: "/prewed/prewed1.png", story: "The Proposal" },
+    { id: 2, img: "/prewed/prewed2.webp", story: "First Date" },
+    { id: 3, img: "/prewed/prewed3.webp", story: "The Proposal" },
     { id: 4, img: "/prewed/prewed1.png", story: "Our Wedding" },
   ]);
   return (
@@ -27,9 +27,9 @@ const Story = () => {
           </p>
         </div>
 
-        <div className=" absolute flex  gap-3 overflow-x-scroll flex-nowrap  px-3  w-[380px] h-[500px]  rounded-t-full top-[77px]">
+        <div className=" absolute flex   gap-3 overflow-x-scroll flex-nowrap  p-4 w-[376px] h-[480px]  rounded-t-full top-[63px] ">
           {story?.map((item, index) => (
-            <div key={index} className="shrink-0 mt-[150px]">
+            <div key={index} className="shrink-0 mt-[160px]">
               <Image
                 src={item?.img}
                 alt="banner"

@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import Home from "../components/Home";
+import React, { useEffect, useState } from "react";
+
 import Brides from "../components/Brides";
 import Schedule from "../components/Schedule";
 import Ceremony from "../components/Ceremony";
@@ -12,14 +12,45 @@ import Message from "../components/Message";
 import Ucapan from "../components/Ucapan";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
-import { MdMusicNote } from "react-icons/md";
-import { MdMusicOff } from "react-icons/md";
+import { MdMusicNote, MdMusicOff } from "react-icons/md";
+import MyHome from "../components/Home";
 
-const page = () => {
+const Page = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audio, setAudio] = useState(null);
+
+  useEffect(() => {
+    if (!audio) {
+      const audioElement = new Audio("/song/song.mp3");
+      audioElement.loop = true;
+      setAudio(audioElement);
+      audioElement
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch((err) => console.error("Error playing audio:", err));
+    }
+    return () => {
+      if (audio) {
+        audio.pause();
+      }
+    };
+  }, [audio]);
+
+  const togglePlay = () => {
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
-    <div className=" h-auto bg-white">
-      <Home />
-      <div className="relative mt-[12px]  z-50">
+    <div className="h-auto bg-white">
+      <MyHome />
+      <div className="relative mt-[12px] z-50">
         <Brides />
       </div>
       <Schedule />
@@ -32,15 +63,18 @@ const page = () => {
       <Ucapan />
       <Footer />
 
-      <div className=" sticky bottom-6 z-50">
+      <div className="sticky bottom-6 z-50">
         <Menu />
       </div>
 
-      <div className=" fixed flex justify-center items-center top-6 right-6  z-50 w-[40px] h-[40px]  rounded-full bg-peachColor">
-        <MdMusicNote />
-      </div>
+      <button
+        className="fixed flex justify-center items-center top-6 right-6 z-50 w-[40px] h-[40px] rounded-full bg-peachColor"
+        onClick={togglePlay}
+      >
+        {isPlaying ? <MdMusicOff /> : <MdMusicNote />}
+      </button>
     </div>
   );
 };
 
-export default page;
+export default Page;

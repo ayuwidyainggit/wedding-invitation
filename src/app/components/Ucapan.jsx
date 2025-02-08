@@ -29,9 +29,6 @@ const Ucapan = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentData = ucapanData.slice(startIndex, startIndex + itemsPerPage);
 
-  console.log("Current Page:", currentPage);
-  console.log("Total Page:", totalPages);
-
   const goToPreviousPage = () => {
     setCurrentPage((prev) => {
       console.log("Prev Page:", Math.max(prev - 1, 1));
@@ -55,7 +52,7 @@ const Ucapan = () => {
         className="absolute top-0 w-full h-full object-cover opacity-40"
         src="/song/bg_video.mp4"
       ></video>
-      <p className="text-purpleColor text-[50px] font-allura  leading-none mb-7">
+      <p className="text-peachColor text-[50px] font-allura  leading-none mb-7">
         Wishes
       </p>
 

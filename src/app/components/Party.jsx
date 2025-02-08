@@ -26,24 +26,24 @@ const Party = () => {
       </div>
 
       <div className=" absolute  top-[140px] text-center  flex flex-col items-center ">
-        <p className="text-purpleColor text-[35px] mt-[15rem] leading-none mb-7">
+        <p className="text-peachColor text-[35px] mt-[15rem] leading-none mb-7">
           Wedding Party
         </p>
-        <p className=" text-xl  text-purpleColor mb-5">09.00 - 12.00</p>
+        <p className=" text-xl  text-peachColor mb-5">09.00 - 12.00</p>
 
-        <p className=" text-3xl font-semibold text-purpleColor mb-5">
+        <p className=" text-3xl font-semibold text-peachColor mb-5">
           Raffles Hotel
         </p>
 
-        <p className=" text-xl  text-purpleColor">
+        <p className=" text-xl  text-peachColor">
           Jl. Terusan Jakarta No.53, Cicaheum, Kec. Kiaracondong, Kota Bandung,
           Jawa Barat 40291
         </p>
-      </div>
 
-      <button className="absolute bottom-[15rem] bg-peachColor  p-3 rounded-md flex flex-col items-center w-[184px]  ">
-        <p className=" text-white text-sm">Open Map</p>
-      </button>
+        <button className=" mt-5  bg-peachColor  p-3 rounded-md flex flex-col items-center w-[184px]  ">
+          <p className=" text-white text-sm">Open Map</p>
+        </button>
+      </div>
     </div>
   );
 };

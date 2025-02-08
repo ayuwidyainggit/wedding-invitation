@@ -26,16 +26,16 @@ const Ceremony = () => {
       </div>
 
       <div className=" absolute  top-[100px] text-center  flex flex-col items-center ">
-        <p className="text-purpleColor text-[35px] mt-[15rem] leading-none mb-7">
+        <p className="text-peachColor text-[35px] mt-[15rem] leading-none mb-7">
           Wedding Ceremony
         </p>
-        <p className=" text-xl  text-purpleColor mb-5">07.00 - 08.00</p>
+        <p className=" text-xl  text-peachColor mb-5">07.00 - 08.00</p>
 
-        <p className=" text-3xl font-semibold text-purpleColor mb-5">
+        <p className=" text-3xl font-semibold text-peachColor mb-5">
           Raffles Hotel
         </p>
 
-        <p className=" text-xl  text-purpleColor">
+        <p className=" text-xl  text-peachColor">
           Jl. Terusan Jakarta No.53, Cicaheum, Kec. Kiaracondong, Kota Bandung,
           Jawa Barat 40291
         </p>

@@ -62,8 +62,8 @@ const Schedule = () => {
         src="/song/bg_video.mp4"
       ></video>
 
-      <div className="text-center flex flex-col items-center ">
-        <p className="text-purpleColor text-[35px] mt-[15rem] leading-none">
+      <div className="absolute text-center flex flex-col items-center ">
+        <p className="text-peachColor text-[35px] mt-[15rem] leading-none">
           We’re Getting Married
         </p>
 
@@ -103,8 +103,8 @@ const Schedule = () => {
                 }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="text-lg text-purpleColor">{item.timer}</p>
-                <p className="text-lg text-purpleColor">{item.note}</p>
+                <p className="text-lg text-peachColor">{item.timer}</p>
+                <p className="text-lg text-peachColor">{item.note}</p>
               </motion.div>
             ))}
         </motion.div>

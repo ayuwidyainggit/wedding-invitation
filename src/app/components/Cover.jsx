@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const Cover = () => {
+const Cover = ({ onButtonClick }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -40,22 +40,21 @@ const Cover = () => {
       </div>
 
       <div className="absolute bottom-[200px]">
-        <Link href="/home">
-          <button
-            onClick={handlePlay}
-            className=" bg-peachColor p-3 rounded-full flex flex-col items-center w-[184px] "
-          >
-            <Image
-              src="/icon/invitation.png"
-              alt="banner"
-              width={1000}
-              height={1000}
-              className="object-cover w-[20px] h-[20px] shadow-pink"
-            />
+        <button
+          onClick={onButtonClick}
+          // onClick={handlePlay}
+          className=" bg-peachColor p-3 rounded-full flex flex-col items-center w-[184px] "
+        >
+          <Image
+            src="/icon/invitation.png"
+            alt="banner"
+            width={1000}
+            height={1000}
+            className="object-cover w-[20px] h-[20px] shadow-pink"
+          />
 
-            <p className=" text-white text-sm">Open Invitation</p>
-          </button>
-        </Link>
+          <p className=" text-white text-sm">Open Invitation</p>
+        </button>
       </div>
     </div>
   );

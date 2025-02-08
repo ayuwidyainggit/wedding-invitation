@@ -17,7 +17,7 @@ const Message = () => {
       ></video>
       <div className="w-[380px] h-[400px] bg-white shadow-xl  z-40 p-4">
         <div className=" relative w-[90%] left-[5%] mb-4 ">
-          <p className="text-purpleColor text-[18px] font-semibold  ">
+          <p className="text-peachColor text-[18px] font-semibold  ">
             Send a wish:
           </p>
         </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const Home = () => {
+const MyHome = () => {
   // Hook untuk mendapatkan progres scroll
   const { scrollYProgress } = useScroll();
   const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "180deg"]);
@@ -225,4 +225,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MyHome;
