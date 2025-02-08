@@ -18,6 +18,7 @@ const Ucapan = () => {
     { nama: "Indah", pesan: "Semoga rezekinya lancar!" },
   ];
 
+  const colors = ["#cdb4db", "#ffc8dd", "#ffafcc", "#bde0fe", "#a2d2ff"];
   const itemsPerPage = 7;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -27,6 +28,23 @@ const Ucapan = () => {
   // Data yang ditampilkan per halaman
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentData = ucapanData.slice(startIndex, startIndex + itemsPerPage);
+
+  console.log("Current Page:", currentPage);
+  console.log("Total Page:", totalPages);
+
+  const goToPreviousPage = () => {
+    setCurrentPage((prev) => {
+      console.log("Prev Page:", Math.max(prev - 1, 1));
+      return Math.max(prev - 1, 1);
+    });
+  };
+
+  const goToNextPage = () => {
+    setCurrentPage((prev) => {
+      console.log("Next Page:", Math.min(prev + 1, totalPages));
+      return Math.min(prev + 1, totalPages);
+    });
+  };
 
   return (
     <div className="relative flex flex-col justify-center items-center h-screen">
@@ -41,46 +59,48 @@ const Ucapan = () => {
         Wishes
       </p>
 
-      <div className="w-[90%] space-y-4">
-        {currentData.map((ucapan, index) => (
-          <div key={index} className="relative flex gap-4 ">
-            <div className="bg-peachColor rounded-full w-[55px] h-[55px] flex justify-center items-center">
-              <p>{ucapan.nama.charAt(0)}</p>
-            </div>
+      <div className="w-[90%] space-y-4 h-[600px] ">
+        {currentData.map((ucapan, index) => {
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+          return (
+            <div key={index} className="relative flex gap-4">
+              <div
+                style={{ backgroundColor: randomColor }}
+                className="rounded-full w-[55px] h-[55px] flex justify-center items-center text-white font-bold"
+              >
+                <p>{ucapan.nama.charAt(0)}</p>
+              </div>
 
-            <div className="relative bg-white w-[80%] shadow-md p-3 rounded-lg before:absolute before:-left-2 before:top-4 before:w-4 before:h-4 before:bg-white before:rotate-45 before:shadow-md">
-              <p className="font-bold text-gray-500">{ucapan.nama}</p>
-              <p className="text-sm text-gray-500">{ucapan.pesan}</p>
+              <div className="relative bg-white w-[80%] shadow-md p-3 rounded-lg before:absolute before:-left-2 before:top-4 before:w-4 before:h-4 before:bg-white before:rotate-45 before:shadow-md">
+                <p className="font-bold text-gray-500">{ucapan.nama}</p>
+                <p className="text-sm text-gray-500">{ucapan.pesan}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex gap-4 mt-4">
+      <div className="absolute bottom-8 flex gap-4 mt-4">
         <button
-          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          onClick={goToPreviousPage}
           disabled={currentPage === 1}
           className={`flex justify-center items-center w-[40px] h-[40px] rounded-full ${
-            currentPage === 1
-              ? "bg-gray-300 cursor-not-allowed"
-              : "bg-purpleColor text-white"
+            currentPage === 1 ? "bg-gray-300 " : "bg-peachColor text-white"
           }`}
         >
           <GrPrevious />
         </button>
-        <span className="text-purpleColor">
+        <span className="text-peachColor">
           Page {currentPage} of {totalPages}
         </span>
         <button
-          onClick={() =>
-            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-          }
+          onClick={goToNextPage}
           disabled={currentPage === totalPages}
           className={` flex justify-center items-center w-[40px] h-[40px] rounded-full ${
             currentPage === totalPages
-              ? "bg-gray-300 cursor-not-allowed"
-              : "bg-purpleColor text-white"
+              ? "bg-gray-300 "
+              : "bg-peachColor text-white"
           }`}
         >
           <GrNext />
