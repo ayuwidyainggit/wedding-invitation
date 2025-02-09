@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-import { useSearchParams } from "next/navigation"; // Import useSearchParams
+import React, { Suspense } from "react";
 
 const Cover = ({ onButtonClick }) => {
-  const searchParams = useSearchParams(); // Ambil query parameter
-  const to = searchParams.get("to") || "Bpk / Ibu Pemirsa"; // Ambil 'to' atau default "Irsalina"
-
   return (
-    <div className="relative bg-[#fff8f8] h-screen flex flex-col justify-center items-center">
+    <div
+      div
+      className="relative bg-[#fff8f8] h-screen flex flex-col justify-center items-center"
+    >
       <video
         autoPlay
         muted
@@ -28,7 +27,7 @@ const Cover = ({ onButtonClick }) => {
         </p>
 
         {/* Menampilkan 'to' jika ada */}
-        <p className="text-gray-600 text-center text-[17px]">To: {to}</p>
+        <p className="text-gray-600 text-center text-[17px]">To: Novi</p>
       </div>
 
       <div className="absolute bottom-[200px]">
