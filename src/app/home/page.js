@@ -63,12 +63,12 @@ const Page = () => {
       <Ucapan />
       <Footer />
 
-      <div className="sticky bottom-6 z-50">
+      <div className="sticky bottom-6">
         <Menu />
       </div>
 
       <button
-        className="fixed flex justify-center items-center top-6 right-6 z-50 w-[40px] h-[40px] rounded-full bg-peachColor"
+        className="fixed flex justify-center items-center top-6 right-6  w-[40px] h-[40px] rounded-full bg-peachColor"
         onClick={togglePlay}
       >
         {isPlaying ? <MdMusicOff /> : <MdMusicNote />}
