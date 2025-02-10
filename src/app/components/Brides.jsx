@@ -39,7 +39,7 @@ const Brides = () => {
   });
 
   return (
-    <div className="relative flex flex-col justify-center bg-babypink2 -mt-3">
+    <div className="relative flex flex-col justify-center bg-babypink2 -mt-3 overflow-x-hidden">
       <div className="text-center rounded-t-xl flex flex-col items-center">
         <motion.p
           className="text-peachColor text-[35px] mt-10 leading-none"

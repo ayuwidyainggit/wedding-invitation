@@ -13,7 +13,7 @@ import Ucapan from "../components/Ucapan";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import { MdMusicNote, MdMusicOff } from "react-icons/md";
-import MyHome from "../components/Home";
+import MyHome from "../components/MyHome";
 
 const Page = () => {
   const [isPlaying, setIsPlaying] = useState(false);

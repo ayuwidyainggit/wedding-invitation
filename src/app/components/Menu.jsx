@@ -14,7 +14,7 @@ const Menu = ({ activeSection }) => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className=" flex justify-center">
       <div className="bg-peachColor flex gap-4 px-4 items-center justify-between shadow-lg rounded-full w-[250px] h-[50px]">
         <button
           onClick={() => handleNavigation("brides")}

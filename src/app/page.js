@@ -11,11 +11,12 @@ import Gift from "./components/Gift";
 import Message from "./components/Message";
 import Ucapan from "./components/Ucapan";
 import Footer from "./components/Footer";
-import MyHome from "./components/Home";
+
 import Menu from "./components/Menu";
 import { MdMusicNote, MdMusicOff } from "react-icons/md";
 import { BsFillGiftFill } from "react-icons/bs";
 import { MdContentCopy } from "react-icons/md";
+import MyHome from "./components/MyHome";
 
 export default function Home() {
   const [selectedOption, setSelectedOption] = useState("transfer");
@@ -86,7 +87,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative">
+    <div className="">
       {isAnimating !== null && (
         <div className="h-auto bg-white">
           <MyHome />
@@ -118,10 +119,6 @@ export default function Home() {
             <Ucapan />
           </section>
           <Footer />
-
-          <div className="sticky bottom-6 z-40">
-            <Menu activeSection={activeSection} />
-          </div>
 
           {/* Tombol Musik */}
           <button
@@ -232,6 +229,10 @@ export default function Home() {
           <Cover onButtonClick={handleOpen} />
         </div>
       )}
+
+      <div className="fixed bottom-6 left-0 w-full flex justify-center z-40">
+        <Menu activeSection={activeSection} />
+      </div>
     </div>
   );
 }

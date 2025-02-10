@@ -6,7 +6,7 @@ const Cover = ({ onButtonClick }) => {
   return (
     <div
       div
-      className="relative bg-[#fff8f8] h-screen flex flex-col justify-center items-center"
+      className="relative bg-[#fff8f8] h-screen flex flex-col justify-center items-center z-50"
     >
       <video
         autoPlay
