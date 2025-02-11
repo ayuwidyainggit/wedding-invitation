@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
-import React, { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import React from "react";
 
 const Cover = ({ onButtonClick }) => {
+  const searchParams = useSearchParams();
+  const to = searchParams.get("to"); // Ambil nilai 'to' dari URL
+
   return (
-    <div
-      div
-      className="relative bg-[#fff8f8] h-screen flex flex-col justify-center items-center z-50"
-    >
+    <div className="relative bg-[#fff8f8] h-screen flex flex-col justify-center items-center z-50">
       <video
         autoPlay
         muted
@@ -26,8 +27,10 @@ const Cover = ({ onButtonClick }) => {
           Sunday, 11 May 2025
         </p>
 
-        {/* Menampilkan 'to' jika ada */}
-        <p className="text-gray-600 text-center text-[17px]">To: Novi</p>
+        {/* Tampilkan "To: ..." hanya jika ada parameter 'to' */}
+        {to && (
+          <p className="text-gray-600 text-center text-[17px]">To: {to}</p>
+        )}
       </div>
 
       <div className="absolute bottom-[200px]">
