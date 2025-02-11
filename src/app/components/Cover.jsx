@@ -1,12 +1,18 @@
 "use client";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 
-const Cover = ({ onButtonClick }) => {
+const ToComponent = () => {
   const searchParams = useSearchParams();
   const to = searchParams.get("to"); // Ambil nilai 'to' dari URL
 
+  return to ? (
+    <p className="text-gray-600 text-center text-[17px]">To: {to}</p>
+  ) : null;
+};
+
+const Cover = ({ onButtonClick }) => {
   return (
     <div className="relative bg-[#fff8f8] h-screen flex flex-col justify-center items-center z-50">
       <video
@@ -27,10 +33,10 @@ const Cover = ({ onButtonClick }) => {
           Sunday, 11 May 2025
         </p>
 
-        {/* Tampilkan "To: ..." hanya jika ada parameter 'to' */}
-        {to && (
-          <p className="text-gray-600 text-center text-[17px]">To: {to}</p>
-        )}
+        {/* Bungkus dengan Suspense agar tidak error di Next.js */}
+        <Suspense fallback={null}>
+          <ToComponent />
+        </Suspense>
       </div>
 
       <div className="absolute bottom-[200px]">
